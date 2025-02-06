@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* transform: scale(0.3); */
+}
+
+.cube {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: rotateX(-25deg);
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(-25deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(-25deg) rotateY(360deg);
+    }
+}
+
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube .box span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(20, 20, 20), aqua);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(49.7px);
+    -webkit-box-reflect: below 50px linear-gradient(#00000000, #00000010, #00000036, #00000058);
+}
+
+.top {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(20, 20, 20);
+    transform: rotateX(90deg) translateZ(49px);
+    transform-style: preserve-3d;
+}
+
+.top::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-149px);
+    background: rgba(0, 255, 255, 0.3);
+    /* box-shadow: 0 0 10px aqua, 0 0 10px aqua, 0 0 50px aqua; */
+}
+
+:root {
+    animation: colors 10s linear infinite;
+}
+
+@keyframes colors {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
