@@ -1,2 +1,3 @@
 # 3D-Loader
-https://github.com/user-attachments/assets/e5dfe741-4a27-4d3d-b390-16c19514b970
+
+<img width="524" height="524" alt="Image" src="https://github.com/user-attachments/assets/ff542037-3588-48ce-bcf8-5a148716ea4c" />
